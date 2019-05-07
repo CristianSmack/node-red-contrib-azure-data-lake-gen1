@@ -4,4 +4,4 @@ This node for Node-REDD created in Homeria Open Solutions has the objective of s
 ### Installation
 
 The installation of this module is as simple as executing the following command:
-    npm install node-red-contrib-azure-data-lake-gen1
+                npm install node-red-contrib-azure-data-lake-gen1
