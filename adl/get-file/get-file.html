@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('datalake-get-file', {
+        category: 'azure datalake',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: "" },
+            server: { value: "", type: "adl-connection" },
+            storename: { value: "", type: "", required:true},
+            filepath: {value:"",required:true}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "icons/datalake.png",
+        label: function () {
+            return this.name || "Azure Data Lake Get file";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="datalake-get-file">
+    <div class="form-row">
+            <label for="node-input-server"><i class="icon-tag"></i> Connection</label>
+            <input type="text" id="node-input-server" placeholder="Connection">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Store Name</label>
+        <input type="text" id="node-input-storename" placeholder="store name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> File Path</label>
+        <input type="text" id="node-input-filepath" placeholder="file path">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="datalake-get-file">
+    <p>A simple node that retrieves a file from an Azure Data Lake Storage Gen 1</p>
+</script>

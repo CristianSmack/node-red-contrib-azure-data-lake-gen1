@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('adl-connection',{
+        category: 'config',
+        defaults: {
+            tenant_id: {value:"",required:true}, 
+            application_id: {value:"",required:true},
+            auth_key: {value:"",required:true},
+        },
+        label: function() {
+            return this.tenant_id+":"+this.application_id;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="adl-connection">
+    <div class="form-row">
+        <label for="node-config-input-tenant_id"><i class="icon-bookmark"></i> Tenant ID</label>
+        <input type="text" id="node-config-input-tenant_id">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-application_id"><i class="icon-bookmark"></i> Application ID</label>
+        <input type="text" id="node-config-input-application_id">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-auth_key"><i class="icon-bookmark"></i> Auth Key</label>
+        <input type="text" id="node-config-input-auth_key">
+    </div>
+</script>
